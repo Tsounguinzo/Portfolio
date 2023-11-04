@@ -17,7 +17,7 @@
             giving me a taste of the various facets of the software industry.
         </p>
         <p>
-              For me, coding isn't just a skill, it's a passion. Welcome to my space on portfolio-beaudelaire.web.dev,
+              For me, coding isn't just a skill, it's a passion. Welcome to my space on portfolio-beaudelaire.web.app,
             a personal progressive web app, showcasing the essence of my journey.
         </p>
     </div>
