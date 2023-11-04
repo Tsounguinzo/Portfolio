@@ -10,7 +10,7 @@
 </script>
 
 <div class="flex flex-col space-y-10">
-    <Header heading="Beaudelaire" subHeading="My personal portfolio"
+    <Header heading="portfolio-beaudelaire.web.dev" subHeading="My personal portfolio"
             customStyle="space-y-4 text-center pt-14 md:pt-28"/>
     <Technologies techStack={beaudelaireTechStack}/>
 

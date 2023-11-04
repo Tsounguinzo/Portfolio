@@ -1,7 +1,7 @@
 export let qAndA = [
     {
         Question: 'Why is there no cookie banner?',
-        Answer: 'beaudelaire.github.io doesn\'t use any personal tracking.'
+        Answer: 'portfolio-beaudelaire.web.dev doesn\'t use any personal tracking.'
     },
     {
         Question: 'Who owns this web app?',

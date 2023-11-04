@@ -3,7 +3,7 @@
     <div class="mb-10">
         <h2>What data does flaming.codes collect?</h2>
         <p>
-            beaudelaire.github.io doesn't collect any personal information about you. No cookies at all get created, not by
+            portfolio-beaudelaire.web.dev doesn't collect any personal information about you. No cookies at all get created, not by
             the beaudelaire.github.io itself or any other 3rd party company.
         </p>
     </div>

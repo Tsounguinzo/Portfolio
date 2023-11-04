@@ -17,7 +17,7 @@ export let nonOpenSourceProjects = [
         href: '/projects/nova'
     },
     {
-        title: 'beaudelaire.github.io',
+        title: 'Beaudelaire',
         duration: 'Ongoing',
         description: 'Creating my personal portfolio',
             role: ['PO','Full stack dev'],

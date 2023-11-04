@@ -1,6 +1,6 @@
 export const siteConfig = {
     name: "Beaudelaire",
-    url: "",
+    url: "https://portfolio-beaudelaire.web.dev",
     ogImage: "/og.png",
     description:
         "Beaudelaire's portfolio",
