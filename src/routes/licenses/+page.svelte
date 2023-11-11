@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Grid from "./components/Grid.svelte";
+    import Grid from "../components/Grid.svelte";
     import licenseData from "../../data/licenses.ts";
-    import LicenceLink from "./components/LicenceLink.svelte";
+    import LicenceLink from "../components/LicenceLink.svelte";
 </script>
 
 <Grid>
