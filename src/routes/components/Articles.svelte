@@ -36,7 +36,7 @@
 </section>
 
 {#each posts as post}
-<Post data={post}/>
+    <Post data={post}/>
 {/each}
 
 <div class="items-center justify-center hidden h-full px-2 py-4  md:inline-flex md:col-start-2 lg:col-start-3 xl:col-start-4 col-end-6 bg-gradient-to-br from-black to-gray-900">

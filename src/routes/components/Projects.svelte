@@ -44,7 +44,7 @@
         <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">
             <a aria-label="Link to send inquiry email"
                class="flex flex-col items-center p-2 space-y-2 text-center break-normal transition ease-in-out transform rounded-md cursor-pointer md:text-left md:items-start group"
-               href="mailto:beaudelaire.dev@gmail.com">
+               href="/contact">
                 <h4 class="text-2xl font-bold leading-6 duration-200 group-hover:-translate-y-3">Want to be listed?</h4>
                 <span class="pb-1 text-xs text-gray-400 duration-300 ease-in-out rounded-full group-hover:-translate-y-2">Now!</span>
                 <div class="max-w-sm mx-auto text-gray-500 duration-700 group-hover:-translate-y-2">
