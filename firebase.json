@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "beaudelaire",
     "source": ".",
     "ignore": [
       "firebase.json",

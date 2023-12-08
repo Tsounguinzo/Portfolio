@@ -41,5 +41,5 @@
     <Projects title="Open Source Projects" subtitle="Open source projects that I created"
               projects={openSourceProjects}/>
     <Ideas/>
-    <Articles posts={posts}/>
+    <!--Articles posts={posts}/-->
 </Grid>
