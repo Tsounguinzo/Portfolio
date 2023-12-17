@@ -25,7 +25,7 @@
         </p>
         <p>
             <strong>This portfolio</strong> gives me an opportunity to write about those changes on a regular basis.
-            Furthermore, I use the PWA to learn about self-hosting a large static site (as of writing, flaming.codes is
+            Furthermore, I use the PWA to learn about self-hosting a large static site (as of writing, this PWA is
             around 1k+ pages big) as well as having fun using Svelte.
         </p>
         <p>

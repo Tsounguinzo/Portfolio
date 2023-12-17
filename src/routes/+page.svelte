@@ -10,7 +10,7 @@
     import Projects from "./components/Projects.svelte";
     import Ideas from "./components/Ideas.svelte";
     import {nonOpenSourceProjects, openSourceProjects} from "../data/projects.ts";
-    import Articles from "./components/Articles.svelte";
+    import Sound from "./components/Sound.svelte";
 
     const posts = [
         {
@@ -41,5 +41,6 @@
     <Projects title="Open Source Projects" subtitle="Open source projects that I created"
               projects={openSourceProjects}/>
     <Ideas/>
+    <Sound/>
     <!--Articles posts={posts}/-->
 </Grid>

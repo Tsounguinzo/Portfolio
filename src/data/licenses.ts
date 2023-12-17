@@ -11,6 +11,12 @@ const licenseData = [
         repoVersion: '3.5.0',
         license: 'Apache License, RemixIcon',
     },
+    {
+        repoLink: 'https://github.com/Rajaniraiyn/svelte-sound',
+        repoLabel: '@Rajaniraiyn/svelte-sound',
+        repoVersion: '0.6.0',
+        license: 'MIT, n/a',
+    },
 ]
 
 export default licenseData;

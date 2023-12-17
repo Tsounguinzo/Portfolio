@@ -8,7 +8,7 @@ export const siteConfig = {
         twitter: "",
         github: ""
     },
-    keywords: `Beaudelaire Tsoungui Nzodoumkouo, Beaudelaire, Tsoungui, Nzodoumkouo, Concordia, portfolio, student`
+    keywords: "Beaudelaire Tsoungui Nzodoumkouo BeaudelaireTsoungui BeaudelaireNzodoumkouo TsounguiNzodoumkouo BeaudelaireTsounguiNzodoumkouo"
 };
 
 export type SiteConfig = typeof siteConfig;
