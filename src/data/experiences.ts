@@ -1,13 +1,13 @@
 const experienceData = [
     "Java",
-    "SvelteKit",
-    "Tailwind.css",
+    "Python",
+    "ML",
+    "Tailwind",
     "Node.js",
     "Google Firebase",
-    "Javascript / ES6",
+    "Javascript / Typescript",
     "SQL",
-    "svelte",
-    "IntelliJ"
+    "svelteKit",
 ]
 
 export default experienceData;

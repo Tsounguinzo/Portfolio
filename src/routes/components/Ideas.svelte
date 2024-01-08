@@ -1,5 +1,5 @@
 <section class=" col-span-full bg-gradient-to-br from-gray-300 to-gray-700 text-primary">
-    <a href="mailto:beaudelaire.dev@gmail.com" aria-label="Link to send an email to me">
+    <a href="mailto:beaudelaire.dev@gmail.com">
         <div class="max-w-2xl px-6 pt-20 pb-32 mx-auto prose-lg sm:px-0 group">
             <h2 class="self-center px-4 pt-10 pb-20 font-semibold text-center lg:text-4xl">Open for your ideas</h2>
             <p>

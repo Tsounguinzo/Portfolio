@@ -4,7 +4,8 @@
 
 
     let soundOn = false;
-    const player = new Sound("https://firebasestorage.googleapis.com/v0/b/portfolio-beaudelaire.appspot.com/o/sound.mp4?alt=media&token=53277243-aac7-43b0-b706-77387018d5d8");
+    let location = "https://firebasestorage.googleapis.com/v0/b/portfolio-beaudelaire.appspot.com/o/sound.mp4?alt=media&token=21f5988c-34fc-45a6-a0bc-8f485250e4b3"
+    const player = new Sound(location);
 
     function toggleSound() {
         if (soundOn) {

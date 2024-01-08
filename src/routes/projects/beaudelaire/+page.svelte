@@ -21,7 +21,7 @@
                 <div style="animation-fill-mode: both; animation-duration: 800ms; animation-delay: 0ms; animation-iteration-count: 1; opacity: 1;">
                     <p>
                         My personal progressive web app ("PWA") to experiment with the latest technologies. This site
-                        uses SvelteKit and github pages to deliver the pages as well as the content. It's ever evolving and a
+                        uses SvelteKit and firebase hosting to deliver the pages as well as the content. It's ever evolving and a
                         playground for me.
                     </p>
                 </div>

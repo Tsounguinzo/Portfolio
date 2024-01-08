@@ -11,10 +11,12 @@
                 <Typewriter mode="loop" cursor={true} keepCursor={true} wordInterval={4000} unwriteInterval={100}
                             --cursor-color='rgb(209, 213, 219)' --cursor-width="10px">
                     <span>Java</span>
-                    <span>Svelte</span>
-                    <span>TesorFlow</span>
-                    <span>Numpy</span>
                     <span>Python</span>
+                    <span>Numpy</span>
+                    <span>Matplotlib</span>
+                    <span>SKLearn</span>
+                    <span>Svelte</span>
+                    <span>Pytorch</span>
                 </Typewriter>
             </span>Tech<br>Student
     </h1>

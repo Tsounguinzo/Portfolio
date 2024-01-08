@@ -19,7 +19,7 @@
 
         {#each projects as project}
             <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">
-                <a aria-label="Link to homodea"
+                <a aria-label={project.description}
                    class="flex flex-col items-center p-2 space-y-2 text-center break-normal transition ease-in-out transform rounded-md cursor-pointer md:text-left md:items-start group"
                    href={project.href}>
                     <h4 class="text-2xl font-bold leading-6 duration-500 group-hover:-translate-y-3">{project.title}</h4>
@@ -42,7 +42,7 @@
         {/each}
 
         <div class="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3">
-            <a aria-label="Link to send inquiry email"
+            <a aria-label="Want to be listed? Now! Click here to send me an email and kick-off your next big idea!"
                class="flex flex-col items-center p-2 space-y-2 text-center break-normal transition ease-in-out transform rounded-md cursor-pointer md:text-left md:items-start group"
                href="/contact">
                 <h4 class="text-2xl font-bold leading-6 duration-200 group-hover:-translate-y-3">Want to be listed?</h4>

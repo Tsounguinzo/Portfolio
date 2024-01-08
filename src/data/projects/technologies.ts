@@ -1,3 +1,3 @@
 export let novaTechStack = ["Java"]
-export let groupsTechStack = ["Typescript", "Node.js", "Tailwind.css", "Firebase", "Svelte"]
-export let beaudelaireTechStack = ["Typescript", "Tailwind.css", "Firebase", "PWA", "Svelte"]
+export let groupsTechStack = ["Typescript", "Node.js", "Tailwind", "Firebase", "SvelteKit", "Sendgrid", "Whatsapp API"]
+export let beaudelaireTechStack = ["Typescript", "Tailwind", "Firebase", "Sendgrid", "SvelteKit"]
