@@ -1,18 +1,16 @@
 <div class="prose">
 
     <div class="mb-10">
-        <h2>What data does portfolio-beaudelaire.web.app collect?</h2>
+        <h2>What data does beaudelaire.ca collect?</h2>
         <p>
-            portfolio-beaudelaire.web.app doesn't collect any personal information about you. No cookies at all get created, not by
-            the beaudelaire.github.io itself or any other 3rd party company.
+            beaudelaire.ca does not collect any personal information about you. It does not create any cookies, neither from the site itself nor through any third-party companies.
         </p>
     </div>
 
     <div class="mb-10">
         <h2>Why is there no cookie consent banner?</h2>
         <p>
-            Because no personal data is collected and absolutely no cookies are set, there simply isn't a need to
-            show a consent banner.
+            Since no personal data is collected and no cookies are used, there is no necessity for a cookie consent banner.
         </p>
     </div>
 </div>

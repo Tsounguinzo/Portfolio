@@ -1,5 +1,11 @@
 export let openSourceProjects = [
     {
+        title: 'Concordia.Courses',
+        duration: 'less than a month',
+        description: 'Course review platform for Concordia students',
+        role: ['PO','Full stack dev'],
+        href: '/projects/concordia-courses'
+    },{
         title: 'Concordia groups',
         duration: 'less than a month',
         description: 'Repository for courses study group chats',
@@ -9,6 +15,13 @@ export let openSourceProjects = [
 ]
 
 export let nonOpenSourceProjects = [
+    {
+        title: 'Flymile.pro',
+        duration: 'less than a month',
+        description: 'The google flights of points/miles',
+        role: ['Team', 'Full stack dev'],
+        href: '/projects/flymile'
+    },
     {
         title: 'Nova',
         duration: '4 months',

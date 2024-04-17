@@ -1,6 +1,7 @@
 const experienceData = [
     "Java",
     "Python",
+    "React",
     "ML",
     "Tailwind",
     "Node.js",
