@@ -5,8 +5,7 @@ import {
     CardContent
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-// TODO: Update skills
-const skills = ["TypeScript/JavaScript", "Python", "Java", "Go", "HTML", "CSS", "TailwindCSS", "NextJS", "ReactJS", "NodeJS", "MongoDB", "PostgreSQL", "Git", "Docker"]
+import {CONFIG} from "@/global-config";
 
 export const Skills = () => {
     return (
@@ -16,7 +15,7 @@ export const Skills = () => {
             </CardHeader>
             <CardContent>
                 <div className="flex flex-wrap gap-2">
-                    {skills.map((s, i) => (
+                    {CONFIG.skills.map((s, i) => (
                         <Badge key={i} variant="secondary">{s}</Badge>
                     ))}
                 </div>

@@ -1,11 +1,12 @@
 import { Metadata } from 'next'
+import {CONFIG} from "@/global-config";
 
 export function constructMetadata({
-  title = 'Beaudelaire Tsoungui Nzodoumkouo',
-  description = "I am a software engineering student at concordia and i love to build.",
-  image = '/beaudelaire.jpeg',
-  icons = '/avatar.svg', // TODO: Add a custom icon
-  noIndex = false
+  title = CONFIG.profileName,
+  description = CONFIG.profileDescription,
+  image = CONFIG.profileImage,
+  icons = CONFIG.icon,
+  noIndex = CONFIG.noIndex
 }: {
   title?: string
   description?: string
@@ -22,14 +23,14 @@ export function constructMetadata({
       images: [image]
     },
     twitter: {
-      card: 'summary_large_image',
+      card: CONFIG.twitter.card,
       title,
       description,
       images: [image],
-      creator: '@beaudelaire001'
+      creator: CONFIG.twitter.creator
     },
     icons,
-    metadataBase: new URL('https://www.beaudelaire.ca'),
+    metadataBase: new URL(CONFIG.websiteUrl),
     ...(noIndex && {
       robots: {
         index: false,

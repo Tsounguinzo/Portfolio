@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
 import useMediaQuery from "@/hook/useMediaQuery";
+import {CONFIG} from "@/global-config";
 
 
 export const AboutMe = () => {
@@ -20,10 +21,7 @@ export const AboutMe = () => {
         </CardHeader>
         <CardContent>
             <p className="text-muted-foreground">
-                {/* Write 1-2 sentences about yourself */}
-                I mostly do Full-stack development with an eye for good design and
-                pretty good grasp of all parts of the stack including the frontend,
-                backend, databases, devops, and cloud.
+                {CONFIG.about}
             </p>
         </CardContent>
     </Card>

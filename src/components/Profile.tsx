@@ -11,26 +11,13 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
+import {CONFIG} from "@/global-config";
 
-const socials = [
-    {
-        name: "Github",
-        link: "https://github.com/Tsounguinzo",
-        icon: <FaGithub className="size-4" />
-    },
-    {
-        name: "LinkedIn",
-        link: "https://www.linkedin.com/in/beaudelaire",
-        icon: <FaLinkedin className="size-4" />
-    },
-    {
-        name: "Instagram",
-        link: "https://www.instagram.com/beaudelaire001",
-        icon: <FaInstagram className="size-4" />
-    }
-    // TODO: Add more socials here
-]
-
+const iconMap = {
+    "github": <FaGithub className="size-4" />,
+    "linkedin": <FaLinkedin className="size-4" />,
+    "instagram": <FaInstagram className="size-4" />
+}
 export const Profile = () => {
     const isDesktopOrLaptop = useMediaQuery("(min-width: 1224px)");
 
@@ -49,9 +36,9 @@ export const Profile = () => {
                                 className="rounded-full size-12 md:w-full h-auto object-cover border-2"
                             />
                             <div className="flex flex-col items-start justify-center">
-                                <h1 className="font-bold md:mt-4 text-xl md:text-2xl">Beaudelaire Tsoungui Nzodoumkouo</h1>
+                                <h1 className="font-bold md:mt-4 text-xl md:text-2xl">{CONFIG.profile.name}</h1>
                                 <p className="text-sm md:text-base text-muted-foreground">
-                                    Engineer &#39;26
+                                    {CONFIG.profile.title}
                                 </p>
                             </div>
                         </div>
@@ -59,13 +46,11 @@ export const Profile = () => {
                     </div>
 
                     <p className="mt-2 text-start text-sm text-muted-foreground">
-                        I am a software engineering student at concordia and i love to build.
+                        {CONFIG.profile.about}
                     </p>
                     <Button className="mt-4 w-full" asChild>
-                        {/* TODO: Add resume */}
-                        {/* TODO: Add link to schedule a call with you using Calendly or Cal */}
                         <Link
-                            href="https://cal.com/beaudelaire.ca"
+                            href={CONFIG.profile.contactUrl}
                             target="_blank"
                             className="font-semibold uppercase"
                         >
@@ -73,7 +58,7 @@ export const Profile = () => {
                         </Link>
                     </Button>
                     <div className="mt-4 flex flex-col space-y-2 border-t border-border pt-4 w-full">
-                        {socials.map((s, i) => {
+                        {CONFIG.profile.socials.map((s, i) => {
                             const parts = s.link.split("/");
                             const username = parts[parts.length - 1];
 
@@ -84,7 +69,10 @@ export const Profile = () => {
                                     target="_blank"
                                     className="cursor-pointer flex items-center gap-2 group"
                                 >
-                                    {s.icon}
+                                    {
+                                        // @ts-expect-error not all icons
+                                        iconMap[s.icon]
+                                    }
                                     <span className="text-sm text-muted-foreground group-hover:text-primary transition-color duration-200 ease-linear">
                                         /{username}
                                     </span>

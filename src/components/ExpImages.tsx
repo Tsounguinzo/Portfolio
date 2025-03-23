@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from 'next/image';
 import { useState } from "react";
 import { ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
-
+import { ExpImages as ExpImagesProps} from "@/types"
 import {
     Dialog,
     DialogTitle,
@@ -14,19 +14,12 @@ import {
     DialogDescription
 } from "@/components/ui/dialog";
 
-interface JobImagesProps {
-    role: string;
-    link: string;
-    images: string[];
-    duration: string;
-}
-
-export const JobImages = ({
+export const ExpImages = ({
     role,
     link,
     images,
     duration
-}: JobImagesProps) => {
+}: ExpImagesProps) => {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -83,10 +76,11 @@ export const JobImages = ({
                                 <ChevronRight className="size-6" />
                             </button>
                         </div>
+                        { link && (
                         <Link href={link} target="_blank" className="text-sm flex items-center justify-center text-blue-600 hover:underline mt-2">
                             Visit Site
                             <ExternalLink className="size-4 ml-2" />
-                        </Link>
+                        </Link> )}
                     </DialogContent>
                 </Dialog>
             ))}

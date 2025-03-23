@@ -4,69 +4,8 @@ import { CalendarDays } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
 
-import { JobImages } from "@/components/JobImages";
-
-const jobs = [
-    {
-        role: "Engineering Consultant",
-        company: "Points Path",
-        logo: "https://pointspath.com/apple-icon.png",
-        duration: "Mar 2025 - Present",
-        description: "Building new features for the Points Path platform.",
-        link: "https://pointspath.com",
-        images: [],
-    },
-    {
-        role: "Software Intern",
-        company: "Autodesk",
-        logo: "https://static-dc.autodesk.net/etc.clientlibs/v605.20220721.1732/dotcom/clientlibs/clientlib-site/resources/images/favicons/app-icon-192.png",
-        duration: "May 2025 - August 2025",
-        description:
-            "Upcoming internship at Autodesk",
-        link: "https://www.autodesk.com",
-        images: [],
-    },
-    {
-        role: "Co-Founder (Acquired By Point.me)",
-        company: "FlyFast",
-        logo: "/flyfast.png",
-        duration: "Sep 2024 - Feb 2025",
-        description:
-            "A cash flight search engine like google flights, but better",
-        link: "https://flyfast.io",
-        images: ["/flyfast-img/home.png", "/flyfast-img/calendar-view.png", "/flyfast-img/flights.png", "/flyfast-img/offers.png", "/flyfast-img/flights-results.png", "/flyfast-img/booking.png", "/flyfast-img/booking-options.png"],
-    },
-    {
-        role: "Teacher Assistant",
-        company: "Concordia University",
-        logo: "https://concordia.ca/etc/designs/concordia/clientlibs/img/favicons/apple-touch-icon.png",
-        duration: "July 2024 - Present",
-        description:
-            "Teaching assistant for Object-Oriented Programming, Data Structures and Algorithms courses and Web Development courses.",
-        link: "https://ta.beaudelaire.ca",
-        images: [],
-    },
-    {
-        role: "Software Developer Intern",
-        company: "Straumann Group",
-        logo: "https://straumann.com/resources/straumann/apple-touch-icon.png",
-        duration: "May 2024 - Aug 2024",
-        description:
-            "Developed and deployed a new design for the visibility toolkit. Implementing undo/redo throughout the design workflow.",
-        link: "https://straumann.com",
-        images: [],
-    },
-    {
-        role: "Software Developer Intern",
-        company: "Straumann Group",
-        logo: "https://straumann.com/resources/straumann/apple-touch-icon.png",
-        duration: "Sep 2024 - Dec 2024",
-        description:
-            "Created test case generation tool which creates random XML docs from XML Schema. Implementing tooth tagging from AI tooth segmentation data.",
-        link: "https://straumann.com",
-        images: [],
-    },
-]
+import { ExpImages } from "@/components/ExpImages";
+import {CONFIG} from "@/global-config";
 
 export const Experience = () => {
     return (
@@ -75,38 +14,38 @@ export const Experience = () => {
             <Card>
                 <CardContent className="pt-6">
                     <ul className="space-y-8">
-                        {jobs.map((j, i) => (
+                        {CONFIG.experience.map((exp, i) => (
                             <li key={i} className="border-b last:border-b-0 pb-8 last:pb-0">
                                 {/* Job Details */}
                                 <div className="flex items-center space-x-4">
                                     <Image
-                                        src={j.logo}
-                                        alt={j.company}
+                                        src={exp.logo}
+                                        alt={exp.company}
                                         width={40}
                                         height={40}
                                         className="rounded-md border shadow-md object-cover"
                                     />
                                     <div>
                                         <h3 className="font-semibold">
-                                            {j.role}
+                                            {exp.role}
                                         </h3>
                                         <p className="text-sm text-muted-foreground">
-                                            {j.company}
+                                            {exp.company}
                                         </p>
                                     </div>
                                 </div>
                                 <p className="text-xs text-muted-foreground mt-2 flex items-center">
                                     <CalendarDays className="size-3 mr-2"/>
-                                    {j.duration}
+                                    {exp.duration}
                                 </p>
-                                <p className="text-sm mt-2">{j.description}</p>
-                                {/* Job Images */}
-                                <JobImages 
-                                    role={j.role} 
-                                    link={j.link}
-                                    images={j.images} 
-                                    duration={j.duration} 
-                                />
+                                <p className="text-sm mt-2">{exp.description}</p>
+                                { exp.images && (
+                                <ExpImages
+                                    role={exp.role}
+                                    link={exp.link}
+                                    images={exp.images}
+                                    duration={exp.duration}
+                                /> )}
                             </li>
                         ))}
                     </ul>

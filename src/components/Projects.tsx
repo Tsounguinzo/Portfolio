@@ -4,36 +4,11 @@ import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
-
-export const projects = [
-    {
-        title: "ConcordiaAI",
-        description: "A Rag Chatbot that can answer questions related to courses and instructors at Concordia",
-        tech: ["LibreChat Fork"],
-        link: "https://chat.concordia.courses",
-    },
-    {
-        title: "Flymile",
-        description: "Flight search engine designed for credit card points enthusiasts",
-        tech: ["React", "Java"],
-        link: "https://flymile.pro",
-    },
-    {
-        title: "Concordia courses",
-        description: "A course and instructor review platform for Concordia students like RateMyProfessors, but better",
-        tech: ["Svelte", "Java", "Python"],
-        link: "https://concordia.courses",
-    },
-    {
-        title: "Visual Schedule Builder Export",
-        description: "Google Chrome extension to export Concordia's course schedule from Visual Schedule Builder to your google calendar",
-        tech: ["JavaScript"],
-        link: "https://chromewebstore.google.com/detail/visual-schedule-builder-e/nbapggbchldhdjckbhdhkhlodokjdoha",
-    },
-]
+import {CONFIG} from "@/global-config";
 
 const techColors = {
-    "React": "bg-blue-500",
+    "TS": "bg-blue-500",
+    "React": "bg-pink-500",
     "React Native": "bg-green-500",
     "LibreChat Fork": "bg-green-500",
     "Svelte": "bg-red-500",
@@ -49,16 +24,24 @@ export const Projects = () => {
                 Featured Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {projects.map((p, i) => (
+                {CONFIG.projects.map((p, i) => (
                     <Card key={i}>
                         <CardContent className="pt-6 h-full">
                             <div className="flex flex-col h-full">
-                                <Link
-                                    href={p.link}
-                                    className="font-semibold text-primary hover:underline"
-                                >
-                                    {p.title}
-                                </Link>
+                                { p.link === "#" ? (
+                                    <h3 className="font-semibold text-primary flex items-center">
+                                        <img src={p.logo} className="h-6 w-6 inline-block mr-2" />
+                                        {p.title}
+                                    </h3>
+                                ) : (
+                                    <Link
+                                        href={p.link}
+                                        className="font-semibold text-primary hover:underline flex items-center"
+                                    >
+                                        <img src={p.logo} className="h-6 w-6 inline-block mr-2"/>
+                                        {p.title}
+                                    </Link>
+                                )}
                                 <p className="text-sm text-muted-foreground mt-1 mb-4">
                                     {p.description}
                                 </p>
@@ -74,13 +57,19 @@ export const Projects = () => {
                                             {p.tech.join(", ")}
                                         </span>
                                     </div>
-                                    <Link
-                                        href={p.link}
-                                        className="flex items-center gap-2 text-sm text-primary hover:underline"
-                                    >
-                                        View Project
-                                        <ExternalLink className="inline-block size-3" />
-                                    </Link>
+                                    { p.link === "#" ? (
+                                        <span className="bg-blue-300 dark:bg-blue-800 dark:text-blue-200 px-2 py-1 rounded-sm text-xs">
+                                            Coming Soon
+                                        </span>
+                                    ) : (
+                                        <Link
+                                            href={p.link}
+                                            className="flex items-center gap-2 text-sm text-primary hover:underline"
+                                        >
+                                            View Project
+                                            <ExternalLink className="inline-block size-3" />
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
                         </CardContent>
