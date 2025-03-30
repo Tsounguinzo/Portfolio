@@ -29,7 +29,7 @@ export type ConfigValue = {
 export const CONFIG: ConfigValue = {
   profileName: 'Beaudelaire Tsoungui Nzodoumkouo',
   profileDescription: "I am a software engineering student at concordia and i love to build.",
-  profileImage: '/beaudelaire.jpeg',
+  profileImage: '/beaudelaire.png',
   about: "I mostly do Full-stack development with an eye for good design and pretty good grasp of all parts of the stack including the frontend, backend, databases, devops, and cloud.",
   icon: '/avatar.svg',
   noIndex: false,
