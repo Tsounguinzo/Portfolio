@@ -2,22 +2,22 @@ import {Experience, Profile, Project, Recommendation} from "@/types";
 
 export const experiences: Experience[] = [
     {
+        role: "Software Intern",
+        company: "Autodesk",
+        logo: "https://static-dc.autodesk.net/etc.clientlibs/v605.20220721.1732/dotcom/clientlibs/clientlib-site/resources/images/favicons/app-icon-192.png",
+        duration: "May 2025",
+        description:
+            "Upcoming internship at Autodesk",
+        link: "https://www.autodesk.com",
+        images: [],
+    },
+    {
         role: "Engineering Consultant",
         company: "Points Path",
         logo: "https://pointspath.com/apple-icon.png",
         duration: "Mar 2025 - Present",
         description: "Building new features for https://pointspath.com.",
         link: "https://pointspath.com",
-        images: [],
-    },
-    {
-        role: "Software Intern",
-        company: "Autodesk",
-        logo: "https://static-dc.autodesk.net/etc.clientlibs/v605.20220721.1732/dotcom/clientlibs/clientlib-site/resources/images/favicons/app-icon-192.png",
-        duration: "May 2025 - August 2025",
-        description:
-            "Upcoming internship at Autodesk",
-        link: "https://www.autodesk.com",
         images: [],
     },
     {
@@ -83,7 +83,7 @@ const socials = [
 export const profile: Profile = {
     name: "Beaudelaire Tsoungui Nzodoumkouo",
     title: "Engineer '26",
-    about: "I am a software engineering student at concordia and i love to build.",
+    about: "I love to build.",
     contactUrl: "https://cal.com/beaudelaire.ca",
     socials: socials
 }
