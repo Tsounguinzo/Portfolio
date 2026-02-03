@@ -1,14 +1,18 @@
 import { Card, CardContent } from "@/components/ui/card";
-import {CONFIG} from "@/global-config";
+import type { Recommendation } from "@/types";
 
-export const Recommendations = () => {
+interface RecommendationsProps {
+    recommendations: Recommendation[];
+}
+
+export const Recommendations = ({ recommendations }: RecommendationsProps) => {
     return (
         <>
             <h2 className="text-xl font-bold my-4">
                 Recommendations
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {CONFIG.recommendations.map((p, i) => (
+                {recommendations.map((p, i) => (
                     <Card key={i}>
                         <CardContent className="pt-6 h-full">
                             <div className="flex flex-col h-full">

@@ -11,14 +11,20 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
-import {CONFIG} from "@/global-config";
+import type { Profile as ProfileType } from "@/types";
 
 const iconMap = {
     "github": <FaGithub className="size-4" />,
     "linkedin": <FaLinkedin className="size-4" />,
     "instagram": <FaInstagram className="size-4" />
 }
-export const Profile = () => {
+
+interface ProfileProps {
+    profileImage: string;
+    profile: ProfileType;
+}
+
+export const Profile = ({ profileImage, profile }: ProfileProps) => {
     const isDesktopOrLaptop = useMediaQuery("(min-width: 1224px)");
 
     return (
@@ -31,14 +37,14 @@ export const Profile = () => {
                                 width={150}
                                 height={150}
                                 quality={100}
-                                src={CONFIG.profileImage}
+                                src={profileImage}
                                 alt="Profile Picture"
                                 className="rounded-full size-12 md:w-full h-auto object-cover border-2"
                             />
                             <div className="flex flex-col items-start justify-center">
-                                <h1 className="font-bold md:mt-4 text-xl md:text-2xl">{CONFIG.profile.name}</h1>
+                                <h1 className="font-bold md:mt-4 text-xl md:text-2xl">{profile.name}</h1>
                                 <p className="text-sm md:text-base text-muted-foreground">
-                                    {CONFIG.profile.title}
+                                    {profile.title}
                                 </p>
                             </div>
                         </div>
@@ -46,11 +52,11 @@ export const Profile = () => {
                     </div>
 
                     <p className="mt-2 text-start text-sm text-muted-foreground">
-                        {CONFIG.profile.about}
+                        {profile.about}
                     </p>
                     <Button className="mt-4 w-full" asChild>
                         <Link
-                            href={CONFIG.profile.contactUrl}
+                            href={profile.contactUrl}
                             target="_blank"
                             className="font-semibold uppercase"
                         >
@@ -58,7 +64,7 @@ export const Profile = () => {
                         </Link>
                     </Button>
                     <div className="mt-4 flex flex-col space-y-2 border-t border-border pt-4 w-full">
-                        {CONFIG.profile.socials.map((s, i) => {
+                        {profile.socials.map((s, i) => {
                             const parts = s.link.split("/");
                             const username = parts[parts.length - 1];
 

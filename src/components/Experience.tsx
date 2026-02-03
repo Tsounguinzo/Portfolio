@@ -5,16 +5,20 @@ import { CalendarDays } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 import { ExpImages } from "@/components/ExpImages";
-import {CONFIG} from "@/global-config";
+import type { Experience as ExperienceType } from "@/types";
 
-export const Experience = () => {
+interface ExperienceProps {
+    experience: ExperienceType[];
+}
+
+export const Experience = ({ experience }: ExperienceProps) => {
     return (
         <>
            <h2 className="text-xl font-bold mb-4 text-black dark:text-white">Work Experience</h2>
             <Card>
                 <CardContent className="pt-6">
                     <ul className="space-y-8">
-                        {CONFIG.experience.map((exp, i) => (
+                        {experience.map((exp, i) => (
                             <li key={i} className="border-b last:border-b-0 pb-8 last:pb-0">
                                 {/* Job Details */}
                                 <div className="flex items-center space-x-4">

@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { ExternalLink } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
-import {CONFIG} from "@/global-config";
+import type { Project } from "@/types";
 
 const techColors = {
     "TS": "bg-blue-500",
@@ -17,14 +17,18 @@ const techColors = {
     "Next.js": "bg-gray-500",
 }
 
-export const Projects = () => {
+interface ProjectsProps {
+    projects: Project[];
+}
+
+export const Projects = ({ projects }: ProjectsProps) => {
     return (
         <>
             <h2 className="text-xl font-bold mb-4">
                 Featured Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                {CONFIG.projects.map((p, i) => (
+                {projects.map((p, i) => (
                     <Card key={i}>
                         <CardContent className="pt-6 h-full">
                             <div className="flex flex-col h-full">
